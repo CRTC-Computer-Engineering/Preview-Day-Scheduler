@@ -1,0 +1,36 @@
+automotive_tech:
+  name: "Automotive Tech"
+  student_limit: 30
+computer_engineering:
+  name: "Computer Engineering"
+  student_limit: 30
+construction_trades:
+  name: "Construction Trades"
+  student_limit: 30
+cosmo:
+  name: "Cosmotology"
+  student_limit: 30
+criminal_justice:
+  name: "Criminal Justice"
+  student_limit: 30
+culinary:
+  name: "Culinary"
+  student_limit: 30
+ems:
+  name: "Emergency Services"
+  student_limit: 30
+graphic_design:
+  name: "Graphic Design and Creative Media"
+  student_limit: 30
+health_science:
+  name: "Health Science"
+  student_limit: 30
+education:
+  name: "Education and Behavioral Science"
+  student_limit: 30
+acting:
+  name: "Theater and Film: Acting"
+  student_limit: 30
+production_design:
+  name: "Theater and Film: Production and Design"
+  student_limit: 30

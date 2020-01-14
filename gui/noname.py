@@ -11,19 +11,19 @@ import wx
 import wx.xrc
 
 ###########################################################################
-## Class MyFrame1
+## Class root_frame
 ###########################################################################
 
-class MyFrame1 ( wx.Frame ):
+class root_frame ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 675,506 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 571,506 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
 		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
 		bSizer2 = wx.BoxSizer( wx.VERTICAL )
 
-		gSizer4 = wx.GridSizer( 2, 2, 0, 0 )
+		gSizer4 = wx.GridSizer( 4, 2, 0, 0 )
 
 		self.FirstName = wx.TextCtrl( self, wx.ID_ANY, u"First Name", wx.DefaultPosition, wx.DefaultSize, 0 )
 		gSizer4.Add( self.FirstName, 0, wx.ALL, 5 )
@@ -31,22 +31,32 @@ class MyFrame1 ( wx.Frame ):
 		self.LastName = wx.TextCtrl( self, wx.ID_ANY, u"Last Name", wx.DefaultPosition, wx.DefaultSize, 0 )
 		gSizer4.Add( self.LastName, 0, wx.ALL, 5 )
 
-		m_choice3Choices = []
-		self.m_choice3 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_choice3Choices, 0 )
-		self.m_choice3.SetSelection( 0 )
-		gSizer4.Add( self.m_choice3, 0, wx.ALL, 5 )
+		self.m_staticText15 = wx.StaticText( self, wx.ID_ANY, u"First Choice", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText15.Wrap( -1 )
 
-		m_choice4Choices = []
-		self.m_choice4 = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_choice4Choices, 0 )
-		self.m_choice4.SetSelection( 0 )
-		gSizer4.Add( self.m_choice4, 0, wx.ALL, 5 )
+		gSizer4.Add( self.m_staticText15, 0, wx.ALL, 5 )
+
+		pickOneChoices = []
+		self.pickOne = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, pickOneChoices, 0 )
+		self.pickOne.SetSelection( 0 )
+		gSizer4.Add( self.pickOne, 0, wx.ALL, 5 )
+
+		self.m_staticText14 = wx.StaticText( self, wx.ID_ANY, u"secondChoice", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_staticText14.Wrap( -1 )
+
+		gSizer4.Add( self.m_staticText14, 0, wx.ALL, 5 )
+
+		pickTwoChoices = []
+		self.pickTwo = wx.Choice( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, pickTwoChoices, 0 )
+		self.pickTwo.SetSelection( 0 )
+		gSizer4.Add( self.pickTwo, 0, wx.ALL, 5 )
 
 		self.m_staticText13 = wx.StaticText( self, wx.ID_ANY, u"Input First and last, then press add.", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText13.Wrap( -1 )
 
 		gSizer4.Add( self.m_staticText13, 0, wx.ALL, 5 )
 
-		self.m_button1 = wx.Button( self, wx.ID_ANY, u"MyButton", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_button1 = wx.Button( self, wx.ID_ANY, u"Add To List", wx.DefaultPosition, wx.DefaultSize, 0 )
 		gSizer4.Add( self.m_button1, 0, wx.ALL, 5 )
 
 
